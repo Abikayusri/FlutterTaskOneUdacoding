@@ -22,4 +22,15 @@ extension SnackbarExtension on BuildContext {
       ),
     );
   }
+
+  void showWarningSnackbar(String message) {
+    ScaffoldMessenger.of(this).showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor: Colors.amber,
+        duration: Duration(seconds: 3),
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
+  }
 }
